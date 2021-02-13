@@ -128,9 +128,9 @@ function ConfigureCloudInit {
       (
          printf "system_info:\n"
          printf "  default_user:\n"
-         printf "    name: '%s'\n" "${MAINTUSR}"
+         printf "    name: '%s'\n" "${CLINITUSR}"
          printf "    lock_passwd: true\n"
-         printf "    gecos: Local Maintenance User\n"
+         printf "    gecos: Cloud User\n"
          printf "    groups: [wheel, adm]\n"
          printf "    sudo: [ 'ALL=(root) NOPASSWD:ALL' ]\n"
          printf "    shell: /bin/bash\n"
