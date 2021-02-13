@@ -328,7 +328,7 @@ function GrubSetup {
         err_exit "Failed to enable FIPS mode"
    else
       err_exit "Installing initramfs..." NONE
-      chroot "${CHROOTMNT}" dracut -fv "/boot/initramfs-${CHROOTKRN}.img" \
+      chroot "${CHROOTMNT}" dracut --fstab -fv "/boot/initramfs-${CHROOTKRN}.img" \
          "${CHROOTKRN}" || \
         err_exit "Failed installing initramfs"
    fi
